@@ -83,7 +83,7 @@ str(info_activity)
 pairs(info_activity)
 ```
 
-![](Reproducible_Research_Assignment_W2_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 
 
@@ -103,7 +103,7 @@ totalStepsPerDay <- aggregate(steps ~ date, info_activity, sum, na.rm=TRUE)
 hist(totalStepsPerDay$steps)
 ```
 
-![](Reproducible_Research_Assignment_W2_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -134,7 +134,7 @@ avgStepsPerInterval<-aggregate(steps~interval, data=info_activity, mean, na.rm=T
 plot(steps~interval, data=avgStepsPerInterval, type="l")
 ```
 
-![](Reproducible_Research_Assignment_W2_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
@@ -182,7 +182,7 @@ totalStepsPerDayWithoutNA <- aggregate(steps ~ date, data=info_activity_withoutN
 hist(totalStepsPerDayWithoutNA$steps)
 ```
 
-![](Reproducible_Research_Assignment_W2_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 ## Are there differences in activity patterns between weekdays and weekends?
 1. For this part the weekdays() function may be of some help here. Use the dataset with the filled-in missing values for this part.
@@ -216,4 +216,4 @@ xyplot(steps ~ interval | days, data = info_activity_withoutNaNDayInfoAveraged, 
        layout = c(1, 2),xlab = "Interval", ylab = "Number of steps")
 ```
 
-![](Reproducible_Research_Assignment_W2_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
